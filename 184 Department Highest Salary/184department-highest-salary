@@ -1,0 +1,12 @@
+import pandas as pd
+
+def department_highest_salary(employee: pd.DataFrame, department: pd.DataFrame) -> pd.DataFrame:
+    merged = pd.merge(employee,department, left_on ='departmentId', right_on = 'id',how = 'inner')
+    merged.drop('departmentId',axis = 1,inplace = True)
+    column_map={'id_x' : 'Empid','name_x' : 'Employee' , 'salary' : 'Salary','id_y' : 'Deptid' , 'name_y' :    'Department' }
+    merged.rename(columns = column_map,inplace = True)
+    highest_salary = merged.groupby('Department').apply(lambda x: x[x['Salary'] == x['Salary'].max()]).reset_index(drop = True)
+    columns_to_drop = ['Deptid','Empid']
+    highest_salary = highest_salary.drop(columns = columns_to_drop)
+    return highest_salary
+    
