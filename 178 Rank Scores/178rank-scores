@@ -1,0 +1,12 @@
+import pandas as pd
+
+def order_scores(scores: pd.DataFrame) -> pd.DataFrame:
+    scores = scores.sort_values(by=['score'],ascending = False)
+    def ad_rank(dataframe,score_column,rank_column):
+        dataframe[rank_column] = dataframe[score_column].rank(ascending = False,method='dense').astype(int)
+        return dataframe
+    
+    scores = ad_rank(scores,'score','rank')
+    return scores[['score','rank']]
+
+    
