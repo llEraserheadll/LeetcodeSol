@@ -1,0 +1,20 @@
+import pandas as pd
+
+def accepted_candidates(candidates: pd.DataFrame, rounds: pd.DataFrame) -> pd.DataFrame:
+    """test = candidates.merge(rounds[['interview_id','round_id','score']], left_on = 'interview_id' , right_on = 'interview_id',how = 'inner')
+    test = test[test['years_of_exp'] >= 2]
+    test = test.drop(['interview_id','round_id'],axis = 1)
+    return_counter = test.groupby('candidate_id')['score'].agg(['sum']).reset_index()
+    result = return_counter[return_counter['sum'] > 15]
+    result = result[['candidate_id']]
+    return result"""
+    exp = candidates[candidates['years_of_exp'] >= 2]
+    score = rounds.groupby('interview_id')['score'].agg('sum').reset_index()
+    result = exp.merge(score[['interview_id','score']],left_on = 'interview_id',right_on = 'interview_id',how = 'inner')
+    result = result[result['score'] > 15]
+    result1 = result[['candidate_id']]
+    return result1
+
+  
+    
+    
