@@ -1,2 +1,0 @@
-# LeetcodeSol
-My Leetcode journey
