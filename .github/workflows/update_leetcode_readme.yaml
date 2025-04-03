@@ -1,13 +1,14 @@
-name: Update LeetCode README
+name: Update README
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight UTC
-  workflow_dispatch: # Allows manual trigger
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:  # Allows manual runs
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -18,16 +19,18 @@ jobs:
           python-version: '3.x'
 
       - name: Install Dependencies
-        run: |
-          pip install requests
+        run: pip install -r requirements.txt || echo "No dependencies needed"
 
       - name: Run LeetCode Stats Script
         run: python update_readme.py
 
       - name: Commit and Push Changes
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git
           git add README.md
           git commit -m 'Updated LeetCode stats in README' || echo 'No changes to commit'
           git push
