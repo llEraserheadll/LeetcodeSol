@@ -1,40 +1,39 @@
-# 🚀 LeetCode Progress Tracker
+# 🚀 LeetCode Solutions by llEraserheadll 🏆
 
-Welcome to my LeetCode solutions repository! I solve LeetCode problems daily and update my solutions here. This README dynamically updates to reflect my progress. 🎯
-
-## 📊 My Progress
-
-- 🏆 **Total Problems Solved:** `{{PROBLEM_COUNT}}`
-- 🔥 **Current Streak:** `{{STREAK_COUNT}}` days
-- 💪 **Difficulty Breakdown:**
-  - 🟢 Easy: `{{EASY_COUNT}}`
-  - 🟡 Medium: `{{MEDIUM_COUNT}}`
-  - 🔴 Hard: `{{HARD_COUNT}}`
-
-## 📚 Solved Problems
-
-| # | Problem | Difficulty | Solution |
-|---|---------|-----------|----------|
-{{PROBLEM_TABLE}}
-
-*(This table updates automatically using GitHub Actions!)*
-
-## 🚀 How to Use
-
-1. Clone the repository:  
-   ```sh
-   git clone https://github.com/your-username/your-repo.git
-   ```
-2. Navigate to the repo:  
-   ```sh
-   cd your-repo
-   ```
-3. Solve problems and commit your solutions! 🎯
-
-## 🔄 Auto-Updating Stats
-
-This repository uses **GitHub Actions** to keep the stats updated daily. The script fetches the number of solved problems and updates this README automatically!
+![LeetCode Badge](https://img.shields.io/badge/Problems%20Solved-100%2B-brightgreen)
+![Language](https://img.shields.io/badge/Language-Python-blue)
+![Last Updated](https://img.shields.io/github/last-commit/llEraserheadll/LeetcodeSol)
 
 ---
-*Happy coding! 🚀*
 
+## 📌 Table of Contents
+
+- [📖 Welcome](#-welcome)
+- [📊 LeetCode Stats](#-leetcode-stats)
+- [🛠️ How to Use](#️-how-to-use)
+- [🙌 Contributions](#-contributions)
+- [📜 License](#-license)
+
+---
+
+## 📖 Welcome
+
+Welcome to my **LeetCode Solutions** repository — a log of my journey to becoming a **10x engineer** 💻⚡  
+This repo includes hand-picked solutions to popular coding problems from **LeetCode**, written with clarity and purpose in mind. The goal? To learn, improve, and **stay consistent**.
+
+---
+
+## 📊 LeetCode Stats
+
+> _"One day at a time. One problem at a time."_ 💡
+
+![LeetCode Stats](https://leetcard.jacoblin.cool/Hashira_Nash?theme=dark&font=Fira+Code&ext=contest)
+
+---
+
+## 🛠️ How to Use
+
+Clone this repository to explore the solutions:
+
+```bash
+git clone https://github.com/llEraserheadll/LeetcodeSol.git
