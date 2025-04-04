@@ -37,3 +37,23 @@ Clone this repository to explore the solutions:
 
 ```bash
 git clone https://github.com/llEraserheadll/LeetcodeSol.git
+## ⚡ How to Use  
+
+Clone this repository to explore the solutions:  
+
+```bash
+git clone https://github.com/llEraserheadll/LeetcodeSol.git
+```
+
+## 🙌 Contributions  
+
+If you'd like to contribute, feel free to fork the repo and open a pull request.  
+Let's grow together and make this an even better resource! 🚀  
+
+---
+
+## 📜 License  
+
+This project is licensed under the **MIT License**.  
+Feel free to use the code, just don't forget to give credit where it's due!  
+
